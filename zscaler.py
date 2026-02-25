@@ -7,7 +7,7 @@ import time
 import configparser
 import os
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __author__ = "Mark Oldham"
 __compile_date__ = "2026-02-25"
 
@@ -22,7 +22,7 @@ def load_config():
     else:
         # Create default config
         config['Display'] = {
-            'message': 'ZScaler.',
+            'message': 'ZScaler123.',
             'wait_seconds': '10'
         }
         with open(config_file, 'w', encoding='utf-8') as f:
@@ -36,7 +36,7 @@ def main():
     config = load_config()
 
     # Get configuration values
-    message = config.get('Display', 'message', fallback='ZScaler.')
+    message = config.get('Display', 'message', fallback='ZScaler123.')
     wait_seconds = config.getint('Display', 'wait_seconds', fallback=10)
 
     # Display the message
